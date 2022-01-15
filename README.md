@@ -1,2 +1,14 @@
-# stock-analysis
-Module 2 VBA training
+# Module 2 VBA training
+
+## Overview of Project
+  I am helping Steve analyze two reports (from 2017 and 2018) containing information about stocks. He seems to want to impress his parents by taking an interest in what stocks would best suit their needs.  I first prepared a workbook for Steve using VBA, which is a programming language that interfaces with Excel data, and furnished him with an summary analysis worksheet with buttons that immediately linked him to a portion of summarized stock information sorted by year. For this project, he wanted to look at ALL of the data, and seemed a bit concerned (or at least annoyingly curious) about the run time difference it would take to analyze all the data. I was curious also. I found out that the run time to execute the refactored code was exactly 1/112,000th the time it took to actually write the program for it.
+### Purpose
+  The purpose of this project was to edit my original code design (from the Module) to help it be more efficient and expeditious. That is, can I use short-cuts with array indexing to facilitate the code execution?
+## Results
+  After realizing that several hours were spent trying to figure out what my indexing plan was going to be (see challenges below...)
+I was able to retrieve the output for both 2017 and 2018.  The time taken to execute the program in the beginning (using All_Stocks_Analysis Macro) was: 0.9375 seconds for 2017 and 0.9179688 seconds for 2018; whereas, using the new code (AllStocksAnalysisRefactored Macro), the output happened: 0.1523438 seconds for 2017 (see attached VBA_Challenge_2017.png) and 0.1953125 seconds for 2018 (see attached VBA_Challenge_2018.png).  Definitely more efficient, especially if you get annoyed by blinking more than once waiting for output...  
+### Challenges and Difficulties Encountered
+  I had the most trouble trying to figure out in my head what the tickerIndex was trying to do. Once I realized that it was an index to help link the output arrays (those being the volumes, tickers, and information for overall price change), it became easier to visualize.  I first made the mistake of defining the tickerIndex to specific tickers and then realized this was not helping to make the code efficient. Lots of trial and error (with indentations and 'Next i' placements) helped me to learn the flow of VBA. 
+## Summary Statements
+-What are the advantages or disadvantages of refactoring code and how do these pros and cons apply to refactoring the original VBA script?
+  Refactoring code helps to clean the up any bulkiness from the code and streamline it. It became easier to read in the end.  Also, it helps the code run more efficiently.  As for the original VBA code, the new refactoring helped our output by not only summarizing the total volumes and prices on one line for each ticker ID, but it helped decrease the run time by a factor of ~5.  I would think there would be some risk involved in refactoring (which could mess with the integrity of the original code). That and programming costs would be the cons.
